@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Super from './TESTE/Super';
+import TableGenerator from './TESTE/TableGenerator';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <Super />  
+    <TableGenerator />  
   </React.StrictMode>
 );
 
