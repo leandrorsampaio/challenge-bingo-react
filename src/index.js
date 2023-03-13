@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './styles/3_generic/reset.css';
 import './index.css';
 import App from './App';
 import TableGenerator from './TESTE/TableGenerator';
