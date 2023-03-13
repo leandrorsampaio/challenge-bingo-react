@@ -8,30 +8,35 @@ const TableGenerator = () => {
   for (let i = 0; i < 25; i++) {
 
     const item = TableData[i];
+    //const idStyle = i === 6 ? { color: 'red' } : {};
 
     // Skip the element at index 5
-    if (i === 5) {
-      continue;
+    if (i === 12) {
+      rows.push(
+        /* Check if item is falsy */
+        item && (
+          <div className={'boardContainer__cell boardContainer__cell--' + i} key={item.id}>
+            <div>BINGO</div>
+          </div>
+        )
+      );
+    } else {
+      rows.push(
+        /* Check if item is falsy */
+        item && (
+          <div className={'boardContainer__cell boardContainer__cell--' + i} key={item.id}>
+            <div>Name: {item.name}</div>
+          </div>
+        )
+      );
     }
 
-    const idStyle = i === 6 ? { color: 'red' } : {};
-
-    rows.push(
-
-      /* Check if item is falsy */
-      item && (
-        <td key={item.id}>
-          <div style={idStyle}>ID: {item.id}</div>
-          <div>Name: {item.name}</div>
-        </td>
-      )
-    );
   }
 
   return (
-    <table>
-      <tbody>{rows}</tbody>
-    </table>
+    <div className='boardContainer'>
+      {rows}
+    </div>
   );
 };
 

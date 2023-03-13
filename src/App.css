@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.boardContainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 800px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.boardContainer__cell {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  height: 50px;
+  background: #61dafb;
+}
