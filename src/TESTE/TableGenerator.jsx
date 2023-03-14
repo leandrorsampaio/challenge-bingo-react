@@ -1,9 +1,17 @@
-import React from 'react';
+import React,{useState} from "react";
 import TableData from './TableData.json';
 
 const TableGenerator = () => {
   
   const rows = [];
+  const [btnState, setBtnState] = useState(false);
+
+  function handleClick() {
+    setBtnState(btnState => !btnState);
+  }
+
+  let toggleBtnClass = btnState ? 'active' : '';
+
 
   for (let i = 0; i < 25; i++) {
 
@@ -25,7 +33,7 @@ const TableGenerator = () => {
         /* Check if item is falsy */
         item && (
           <div className={'boardContainer__cell boardContainer__cell--' + i} key={item.id}>
-            <div>Name: {item.name}</div>
+            <div onClick={handleClick} className={toggleBtnClass}>Name: {item.name}</div>
           </div>
         )
       );
