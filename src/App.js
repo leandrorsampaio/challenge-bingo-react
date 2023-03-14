@@ -1,10 +1,10 @@
-import './App.css';
+import React from 'react';
+import Bingocard from './objects/bingocard';
 
 function App() {
   return (
 
-    <h1>Meu Bingo</h1>
-
+    <Bingocard />
 
   );
 }
