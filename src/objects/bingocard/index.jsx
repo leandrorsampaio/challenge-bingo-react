@@ -16,7 +16,7 @@ const Bingocard = () => {
 
     for (let i = 0; i < 25; i++) {
 
-        const item = TableData[i];
+        let item = TableData[i];
         let defineLine = '';
         let defineColumn = '';
         let defineDiagonal = '';
