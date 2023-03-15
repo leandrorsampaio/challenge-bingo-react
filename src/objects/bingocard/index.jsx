@@ -7,8 +7,9 @@ const Bingocard = () => {
     const rows = [];
     const [btnState, setBtnState] = useState(false);
 
-    function handleClick() {
+    function handleClick(i) {
         setBtnState(btnState => !btnState);
+        console.log(i);
     }
 
     let toggleBtnClass = btnState ? ' active' : '';
@@ -81,14 +82,11 @@ const Bingocard = () => {
             cellBingo = true;
         }
 
-
-
-
         rows.push(
             /* Check if item is falsy */
             item && (
                 <div
-                    onClick={handleClick}
+                    onClick={() => handleClick(i)}
                     className={'bingoCard__cell --' + i + defineLine + defineColumn + defineDiagonal + toggleBtnClass} 
                     key={item.id}>
                     <p className='bingoCard__text'>
