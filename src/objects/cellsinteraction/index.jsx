@@ -16,7 +16,7 @@ const Cellsinteraction = (props) => {
             } else {
               return [...prevIndexes, index];
             }
-          });
+        });
     }
 
 

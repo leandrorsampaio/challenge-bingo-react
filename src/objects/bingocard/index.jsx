@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import TableData from '../../assets/data/BoardData.json';
 import './style.scss'
 
@@ -77,7 +77,7 @@ const Bingocard = (props) => {
             /* Check if item is falsy */
             item && (
                 <div
-                    className={'bingoCard__cell --' + i + defineLine + defineColumn + defineDiagonal + (cellBingo ? ' active' : '') + (props.clickedIndexes.includes(item.id) ? 'X' : '')} 
+                    className={'bingoCard__cell --' + i + defineLine + defineColumn + defineDiagonal + (cellBingo ? ' active' : '') + (props.clickedIndexes.includes(item.id) ? ' active' : '')} 
                     key={item.id}
                     onClick={() => props.onClick(item.id)}>
                     <p className='bingoCard__text'>
