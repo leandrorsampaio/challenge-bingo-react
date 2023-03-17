@@ -2,89 +2,10 @@ import React, { useState, useEffect } from "react";
 import TableData from '../../assets/data/BoardData.json';
 import './style.scss'
 
-const Bingocard = () => {
+const Bingocard = (props) => {
 
     const rows = [];
-    const [btnState, setBtnState] = useState(false);
-
-    function handleClickConatainer() {
-        setBtnState(btnState => !btnState);
-        //setBtnState(i === btnState ? true : false)
-
-
-        /*
-        const cellsLine1 = document.querySelectorAll(".--line1");
-        const cellsLine2 = document.querySelectorAll(".--line2");
-        const cellsLine3 = document.querySelectorAll(".--line3");
-        const cellsLine4 = document.querySelectorAll(".--line4");
-        const cellsLine5 = document.querySelectorAll(".--line5");
-        const cellsColumn1 = document.querySelectorAll(".--column1");
-        const cellsColumn2 = document.querySelectorAll(".--column2");
-        const cellsColumn3 = document.querySelectorAll(".--column3");
-        const cellsColumn4 = document.querySelectorAll(".--column4");
-        const cellsColumn5 = document.querySelectorAll(".--column5");
-        const cellsDiagonal1 = document.querySelectorAll(".--diagonal1");
-        const cellsDiagonal2 = document.querySelectorAll(".--diagonal2");
-        */
-
-
-
-
-        const allBingoCardCells = document.querySelectorAll(".bingoCard__cell");
-
-        if (allBingoCardCells) {
-          console.log("Element found:", allBingoCardCells);
-        } else {
-          console.log("Element not found");
-        }
-
-        let countLine = 0;
-        let countColumn = 0;
-        let countDiagonal = 0;
-        let userWon = false;
-
-        for (let i = 0; i < allBingoCardCells.length; i++) {
-            
-            let itemClassList = allBingoCardCells[i].classList;
-
-            if (
-                (itemClassList.contains('--line1') && itemClassList.contains('active')) ||
-                (itemClassList.contains('--line2') && itemClassList.contains('active')) ||
-                (itemClassList.contains('--line3') && itemClassList.contains('active')) ||
-                (itemClassList.contains('--line4') && itemClassList.contains('active')) ||
-                (itemClassList.contains('--line5') && itemClassList.contains('active')) ||
-                (itemClassList.contains('--column1') && itemClassList.contains('active')) ||
-                (itemClassList.contains('--column2') && itemClassList.contains('active')) ||
-                (itemClassList.contains('--column3') && itemClassList.contains('active')) ||
-                (itemClassList.contains('--column4') && itemClassList.contains('active')) ||
-                (itemClassList.contains('--column5') && itemClassList.contains('active')) ||
-                (itemClassList.contains('--diagonal1') && itemClassList.contains('active')) ||
-                (itemClassList.contains('--diagonal2') && itemClassList.contains('active'))
-            ) {
-                countLine++;
-                if (countLine === 5) {
-                    userWon = true;
-                }
-            }
-
-        }
-        
-        console.log(countLine);
-        console.log(userWon);
-        
-    }
-
-    let toggleBtnClass = btnState ? ' active' : '';
-
-
-    
-
-
-
-
-    
-
-
+   
     for (let i = 0; i < 25; i++) {
 
         let item = TableData[i];
@@ -157,9 +78,12 @@ const Bingocard = () => {
             item && (
                 <div
                     className={'bingoCard__cell --' + i + defineLine + defineColumn + defineDiagonal + (cellBingo ? ' active' : '')} 
-                    key={item.id}>
+                    key={item.id}
+                    onClick={() => props.onClick(item.id)}>
                     <p className='bingoCard__text'>
-                        {cellBingo ? 'Bingo' : item.name}
+                        {cellBingo ? 'Bingo' : item.name} - 
+                        {props.activeIndex === item.id ? 'LOL' : ''} - 
+                        {props.clickedIndexes.includes(item.id) ? 'X' : ''}
                     </p>
                 </div>
             )
@@ -169,7 +93,7 @@ const Bingocard = () => {
     }
 
     return (
-        <div className={'bingoCard' + toggleBtnClass } onClick={() => handleClickConatainer()}>
+        <div className={'bingoCard'}>
             {rows}
         </div>
     );

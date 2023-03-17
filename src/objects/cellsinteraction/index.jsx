@@ -1,14 +1,29 @@
 import React, { useState } from "react";
+import Bingocard from '../bingocard';
 import './style.scss'
 
-const Cellsinteraction = () => {
+const Cellsinteraction = (props) => {
 
-    const [hoverRef, isHovered] = useHover();
-    return <div ref={hoverRef}>{isHovered ? "😁" : "☹️"}</div>;
+
+    const [activeIndex, setActiveIndex] = useState(-1);
+    const [clickedIndexes, setClickedIndexes] = useState([]);
+
+    function handleClick(index) {
+        setActiveIndex(index);
+        setClickedIndexes((prevIndexes) => [...prevIndexes, index]);
+    }
+
+
+
 
     return (
         <div>
-            OI
+            <Bingocard 
+                activeIndex={activeIndex}
+                clickedIndexes={clickedIndexes}
+                onClick={handleClick}
+             />
+             <div>Clicked Indexes: {clickedIndexes.join(', ')}</div>
         </div>
     );
 };
