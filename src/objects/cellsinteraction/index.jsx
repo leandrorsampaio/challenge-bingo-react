@@ -10,7 +10,13 @@ const Cellsinteraction = (props) => {
 
     function handleClick(index) {
         setActiveIndex(index);
-        setClickedIndexes((prevIndexes) => [...prevIndexes, index]);
+        setClickedIndexes((prevIndexes) => {
+            if (prevIndexes.includes(index)) {
+              return prevIndexes.filter((i) => i !== index);
+            } else {
+              return [...prevIndexes, index];
+            }
+          });
     }
 
 
