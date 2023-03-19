@@ -9,19 +9,35 @@ const Cellsinteraction = (props) => {
     const [activeIndex, setActiveIndex] = useState(-1);
     const [clickedIndexes, setClickedIndexes] = useState([]);
 
+
+
     function handleClick(index) {
 
-        setActiveIndex(index);
+        if(!index.target) {
 
-        setClickedIndexes((prevIndexes) => {
-            if (prevIndexes.includes(index)) {
-                return prevIndexes.filter((i) => i !== index);
-            } else {
-                return [...prevIndexes, index];
+            // set the last item clicked only
+            setActiveIndex(index);
+
+            setClickedIndexes((prevIndexes) => {
+                if (prevIndexes.includes(index)) {
+                    return prevIndexes.filter((i) => i !== index);
+                } else {
+                    return [...prevIndexes, index];
+                }
+            });
+
+        } else {
+            
+            if (index.target.classList.contains('js-cleanUpCard')) {
+                setClickedIndexes((prevIndexes) => {
+                    return [];
+                });
             }
-        });
+        }
 
     }
+
+
 
 
     return (
@@ -36,6 +52,9 @@ const Cellsinteraction = (props) => {
 
             <div>Clicked Indexes: {clickedIndexes.join(', ')}</div>
 
+            <button className="js-cleanUpCard" onClick={handleClick}>
+                Clean Up Bingo Card
+            </button>
 
         </div>
     );
