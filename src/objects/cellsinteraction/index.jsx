@@ -11,8 +11,7 @@ const Cellsinteraction = (props) => {
 
     function handleClick(index) {
 
-        //setActiveIndex(index);
-        //console.log(index);
+        setActiveIndex(index);
 
         setClickedIndexes((prevIndexes) => {
             if (prevIndexes.includes(index)) {
@@ -25,61 +24,6 @@ const Cellsinteraction = (props) => {
     }
 
 
-
-
-
-
-    switch (true) {
-        case (clickedIndexes.includes(1) && clickedIndexes.includes(2) && clickedIndexes.includes(3) && clickedIndexes.includes(4) && clickedIndexes.includes(5)):
-            console.log('Linha 1');
-            break;
-        case (clickedIndexes.includes(6) && clickedIndexes.includes(7) && clickedIndexes.includes(8) && clickedIndexes.includes(9) && clickedIndexes.includes(10)):
-            console.log('Linha 2');
-            break;
-        case (clickedIndexes.includes(11) && clickedIndexes.includes(12) && clickedIndexes.includes(13) && clickedIndexes.includes(14) && clickedIndexes.includes(15)):
-            console.log('Linha 3');
-            break;
-        case (clickedIndexes.includes(16) && clickedIndexes.includes(17) && clickedIndexes.includes(18) && clickedIndexes.includes(19) && clickedIndexes.includes(20)):
-            console.log('Linha 4');
-            break;
-        case (clickedIndexes.includes(21) && clickedIndexes.includes(22) && clickedIndexes.includes(23) && clickedIndexes.includes(24) && clickedIndexes.includes(25)):
-            console.log('Linha 5');
-            break;
-
-
-
-        case (clickedIndexes.includes(1) && clickedIndexes.includes(6) && clickedIndexes.includes(11) && clickedIndexes.includes(16) && clickedIndexes.includes(21)):
-            console.log('Coluna 1');
-            break;
-        case (clickedIndexes.includes(2) && clickedIndexes.includes(7) && clickedIndexes.includes(12) && clickedIndexes.includes(17) && clickedIndexes.includes(22)):
-            console.log('Coluna 2');
-            break;
-        case (clickedIndexes.includes(3) && clickedIndexes.includes(8) && clickedIndexes.includes(13) && clickedIndexes.includes(18) && clickedIndexes.includes(23)):
-            console.log('Coluna 3');
-            break;
-        case (clickedIndexes.includes(4) && clickedIndexes.includes(9) && clickedIndexes.includes(14) && clickedIndexes.includes(19) && clickedIndexes.includes(24)):
-            console.log('Coluna 4');
-            break;
-        case (clickedIndexes.includes(5) && clickedIndexes.includes(10) && clickedIndexes.includes(15) && clickedIndexes.includes(20) && clickedIndexes.includes(25)):
-            console.log('Coluna 5');
-            break;
-
-
-
-        case (clickedIndexes.includes(1) && clickedIndexes.includes(7) && clickedIndexes.includes(13) && clickedIndexes.includes(19) && clickedIndexes.includes(25)):
-            console.log('DIAGONAL 1');
-            break;
-        case (clickedIndexes.includes(5) && clickedIndexes.includes(9) && clickedIndexes.includes(13) && clickedIndexes.includes(17) && clickedIndexes.includes(21)):
-            console.log('DIAGONAL 2');
-            break;
-        default:
-            console.log('NO');
-    }
-
-
-
-
-
     return (
         <div>
             <Bingocard
@@ -88,7 +32,7 @@ const Cellsinteraction = (props) => {
                 onClick={handleClick}
             />
 
-            <Checkwinner />
+            <Checkwinner clickedIndexes={clickedIndexes} />
 
             <div>Clicked Indexes: {clickedIndexes.join(', ')}</div>
 
