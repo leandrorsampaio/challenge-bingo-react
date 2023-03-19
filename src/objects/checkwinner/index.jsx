@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { start } from "../confetti";
-import './style.scss'
+import Gifswinner from "../gifswinner";
 
 const Checkwinner = (props) => {
 
@@ -75,6 +75,7 @@ const Checkwinner = (props) => {
     return (
         <>
             {bingoWinner === true ? <Confetti /> : null}
+            {bingoWinner === true ? <Gifswinner /> : null}
         </>
     );
 };
