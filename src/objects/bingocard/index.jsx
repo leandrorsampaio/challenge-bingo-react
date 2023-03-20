@@ -91,7 +91,7 @@ const Bingocard = (props) => {
             /* Check if item is falsy */
             item && (
                 <div
-                    className={'bingoCard__cell --' + i + defineLine + defineColumn + defineDiagonal + (cellBingo ? ' active' : '') + (props.clickedIndexes.includes(i+1) ? ' active' : '') + (props.activeIndex === i+1 ? 'last-clicked' : '')} 
+                    className={'bingoCard__cell --' + i + defineLine + defineColumn + defineDiagonal + (cellBingo ? ' active' : '') + (props.clickedIndexes.includes(i+1) ? ' active' : '') + (props.activeIndex === i+1 ? ' last-clicked' : '')} 
                     key={i+1}
                     onClick={() => props.onClick(i+1)}>
                     <p className='bingoCard__text'>
