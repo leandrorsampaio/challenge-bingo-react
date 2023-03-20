@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import TableData from '../../assets/data/BoardData.json';
 import './style.scss'
 
+
 const Bingocard = (props) => {
 
+
+    // Fisher-Yates shuffle algorithm
+    function shuffleArray(array) {
+        const shuffledArray = [...array];
+        for (let i = shuffledArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+        }
+        return shuffledArray;
+    }
+
+    const shuffledData = shuffleArray(TableData);
+    const [activeIndexMM] = useState(shuffledData);
     const rows = [];
    
     for (let i = 0; i < 25; i++) {
 
-        let item = TableData[i];
+        let item = activeIndexMM[i];
         let defineLine = '';
         let defineColumn = '';
         let defineDiagonal = '';
@@ -77,12 +91,12 @@ const Bingocard = (props) => {
             /* Check if item is falsy */
             item && (
                 <div
-                    className={'bingoCard__cell --' + i + defineLine + defineColumn + defineDiagonal + (cellBingo ? ' active' : '') + (props.clickedIndexes.includes(item.id) ? ' active' : '') + (props.activeIndex === item.id ? 'last-clicked' : '')} 
-                    key={item.id}
-                    onClick={() => props.onClick(item.id)}>
+                    className={'bingoCard__cell --' + i + defineLine + defineColumn + defineDiagonal + (cellBingo ? ' active' : '') + (props.clickedIndexes.includes(i+1) ? ' active' : '') + (props.activeIndex === i+1 ? 'last-clicked' : '')} 
+                    key={i+1}
+                    onClick={() => props.onClick(i+1)}>
                     <p className='bingoCard__text'>
                         {cellBingo ? 'Bingo' : item.name} 
-                        {props.clickedIndexes.includes(item.id) ? ' X' : ''}
+                        {props.clickedIndexes.includes(i+1) ? ' X' : ''}
                     </p>
                 </div>
             )
