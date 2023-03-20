@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Bingocard from '../bingocard';
 import Checkwinner from '../checkwinner';
 import './style.scss'
@@ -8,6 +8,8 @@ const Cellsinteraction = (props) => {
 
     const [activeIndex, setActiveIndex] = useState(-1);
     const [clickedIndexes, setClickedIndexes] = useState([]);
+    const [newBingoCard, setNewBingoCard] = useState(false);
+
 
 
 
@@ -26,12 +28,23 @@ const Cellsinteraction = (props) => {
                 }
             });
 
+            setNewBingoCard(false);
+
+
         } else {
             
             if (index.target.classList.contains('js-cleanUpCard')) {
-                setClickedIndexes((prevIndexes) => {
+                setClickedIndexes(() => {
                     return [];
                 });
+
+                setNewBingoCard(true);
+                setTimeout(function() {
+                    setNewBingoCard(false);
+                }, 1000);
+
+
+
             }
         }
 
@@ -42,11 +55,19 @@ const Cellsinteraction = (props) => {
 
     return (
         <div>
-            <Bingocard
-                activeIndex={activeIndex}
-                clickedIndexes={clickedIndexes}
-                onClick={handleClick}
-            />
+            
+
+            {!newBingoCard ? (
+                <Bingocard
+                    activeIndex={activeIndex}
+                    clickedIndexes={clickedIndexes}
+                    onClick={handleClick}
+                    />
+            ) : (
+                <div>Transition useEffect to a new card</div>
+            )}
+
+            
 
             <Checkwinner clickedIndexes={clickedIndexes} />
 
