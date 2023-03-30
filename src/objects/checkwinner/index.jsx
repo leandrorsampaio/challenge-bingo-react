@@ -10,7 +10,7 @@ const Checkwinner = (props) => {
         useEffect(() => {
           start();
         });
-        return <canvas id="canvas" />;
+        return <canvas id="canvas" className="confettiCanvas"/>;
     }
 
     let bingoWinner = false;

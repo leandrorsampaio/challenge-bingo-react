@@ -54,7 +54,7 @@ const Cellsinteraction = (props) => {
 
 
     return (
-        <div>
+        <div className="bigoCardSection">
             
 
             {!newBingoCard ? (
