@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Headerpage from './objects/headerpage';
 import Cellsinteraction from './objects/cellsinteraction';
 import Refreshpage from './objects/refreshpage';
 
@@ -15,6 +16,8 @@ function App() {
 
   return (
     <>
+
+      <Headerpage />
 
       <Cellsinteraction />
 
