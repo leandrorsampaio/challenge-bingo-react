@@ -1,0 +1,85 @@
+@import '../../styles/1_settings/colors';
+@import '../../styles/1_settings/sizes';
+@import '../../styles/2_tools/viewports';
+
+.header {
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        background: $color-primary;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    &__profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__charImage {
+        max-height: 3rem;
+    }
+    
+    &__profileWrapper {
+        padding-left: 0.5rem;
+    }
+
+    &__profileText {
+        margin: 0;
+        color: $color-lighterAlt;
+
+        &.--name {
+            font-size: 1rem;
+        }
+        &.--level {
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+            font-style: italic;
+        }
+    }
+    
+    &__logo {
+        cursor: default;
+    }
+
+    &__logoText {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin: 0;
+        color: $color-lighterAlt;
+    }   
+}       
+
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    background: $color-tertiary;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 0;
+
+    &__text {
+        color: $color-lighterAlt;
+        font-size: 0.8rem;
+        display: flex;
+    }
+
+    &__link {
+        margin-left: 0.5rem;
+        display: flex;
+        align-items: center;
+
+        .svgIcon {
+            height: 0.8rem;
+        }
+    }
+}

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Headerpage from './objects/headerpage';
 import Cellsinteraction from './objects/cellsinteraction';
 import Refreshpage from './objects/refreshpage';
+import Footerpage from './objects/footerpage';
+
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
       <Cellsinteraction />
 
       <Refreshpage onValueChange={handleValueChange} />
+
+      <Footerpage />
 
     </>
 
