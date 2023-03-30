@@ -1,0 +1,36 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border: $color-primary;
+    border-radius: 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0px 1.6rem;
+    text-decoration: none;
+    text-align: center;
+    min-width: 8rem;
+    height: 3rem;
+    color: $color-lighterAlt;
+    user-select: none;
+    background-color: $color-primary;
+    -webkit-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+
+    @media (hover: hover) {
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $color-darker;
+            -webkit-transition: background-color 0.5s ease-out;
+            -moz-transition: background-color 0.5s ease-out;
+            -o-transition: background-color 0.5s ease-out;
+            transition: background-color 0.5s ease-out;
+        }
+    }
+}
