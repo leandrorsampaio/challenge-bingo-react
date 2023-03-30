@@ -1,12 +1,32 @@
 @import '../../styles/1_settings/colors';
+@import '../../styles/1_settings/sizes';
+@import '../../styles/2_tools/viewports';
 
 .bingoCard {
-    display: flex;
-    flex-direction: row;
-    padding: 0 0 0 1px;
-    max-width: 800px;
-    width: 100%;
-    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    @include resize-to(small) {
+        width: 90%;
+    }
+
+    @include resize-to(medium) {
+        width: 80%;
+    }
+
+    @include resize-to(large) {
+        width: 500px;
+    }
+
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 1px;
+    }
 
     &__cell {
         display: flex;
@@ -15,12 +35,36 @@
         justify-content: center;
         margin: 0 1px 1px 0;
         width: calc(20% - 1px);
-        height: 50px;
-        background: #61dafb;
+        background-color: $color-primary;
+        padding: 10px 0;
+        -webkit-transition: background-color 0.5s ease-out;
+        -moz-transition: background-color 0.5s ease-out;
+        -o-transition: background-color 0.5s ease-out;
+        transition: background-color 0.5s ease-out;
+
+        &.active {
+            background-color: $color-dark;
+        }
+
+        @media (hover: hover) {
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $color-darker;
+                -webkit-transition: background-color 0.5s ease-out;
+                -moz-transition: background-color 0.5s ease-out;
+                -o-transition: background-color 0.5s ease-out;
+                transition: background-color 0.5s ease-out;
+            }
+        }
     }
 
     &__text {
-        background: #9ae8fd;
+        color: $color-white;
+        font-family: 'Roboto Condensed', sans-serif;
+        text-align: center;
+        font-size: 0.8rem;
+        margin: 0 5px;
     }
   }
   

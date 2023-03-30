@@ -107,7 +107,9 @@ const Bingocard = (props) => {
 
     return (
         <div className={'bingoCard'}>
-            {rows}
+            <div className={'bingoCard__inner'}>
+                {rows}
+            </div>
         </div>
     );
 };
