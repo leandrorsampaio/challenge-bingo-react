@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.scss'
 
 const Refreshpage = () => {
 
@@ -8,9 +9,11 @@ const Refreshpage = () => {
 
     return (
         <>
-            <button onClick={handleClickRefresh}>
-                Refresh
-            </button>
+            <div className='refreshPageControl'>            
+                <button className='button' onClick={handleClickRefresh}>
+                    Get a new Bingo Card
+                </button>
+            </div>
         </>
     );
 };
