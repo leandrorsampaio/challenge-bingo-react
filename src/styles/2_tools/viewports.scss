@@ -1,0 +1,15 @@
+@mixin resize-to($media) {
+  @if $media == small {
+    @media (max-width: $screen-small-max) {
+      @content;
+    }
+  } @else if $media == medium {
+    @media (min-width: $screen-medium-min) and (max-width: $screen-medium-max) {
+      @content;
+    }
+  } @else if $media == large {
+    @media (min-width: $screen-large-min) {
+      @content;
+    }
+  }
+}
