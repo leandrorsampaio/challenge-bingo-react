@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Bingocard from '../bingocard';
 import Checkwinner from '../checkwinner';
 import './style.scss'
@@ -71,9 +71,8 @@ const Cellsinteraction = (props) => {
 
             <Checkwinner clickedIndexes={clickedIndexes} />
 
-            <div>Clicked Indexes: {clickedIndexes.join(', ')}</div>
-
-            <button className="js-cleanUpCard" onClick={handleClick}>
+            <div className="hiddenElement">Clicked Indexes: {clickedIndexes.join(', ')}</div>
+            <button className="js-cleanUpCard hiddenElement" onClick={handleClick}>
                 Clean Up Bingo Card
             </button>
 

@@ -4,7 +4,7 @@
 
 .bingoCard {
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 3rem;
 
     @include resize-to(small) {
         width: 90%;
@@ -15,7 +15,7 @@
     }
 
     @include resize-to(large) {
-        width: 500px;
+        width: 550px;
     }
 
 
@@ -38,6 +38,7 @@
         width: calc(20% - 1px);
         background-color: $color-primary;
         padding: 10px 0;
+        cursor: pointer;
         -webkit-transition: background-color 0.5s ease-out;
         -moz-transition: background-color 0.5s ease-out;
         -o-transition: background-color 0.5s ease-out;

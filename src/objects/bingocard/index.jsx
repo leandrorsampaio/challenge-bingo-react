@@ -95,8 +95,7 @@ const Bingocard = (props) => {
                     key={i+1}
                     onClick={() => props.onClick(i+1)}>
                     <p className={'bingoCard__text' + (cellBingo ? ' --cellBingo' : '')}>
-                        {cellBingo ? 'Bingo' : item.name} 
-                        {props.clickedIndexes.includes(i+1) ? ' X' : ''}
+                        {cellBingo ? 'Bingo' : item.name}
                     </p>
                 </div>
             )
