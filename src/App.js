@@ -23,7 +23,7 @@ function App() {
 
       <Cellsinteraction />
 
-      <Refreshpage onValueChange={handleValueChange} />
+      <Refreshpage onValueChange={handleValueChange} buttonText={'Get a New Bingo Card'} buttonClass={'--mainCard'} />
 
       <Footerpage />
 

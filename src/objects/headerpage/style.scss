@@ -3,14 +3,19 @@
 @import '../../styles/2_tools/viewports';
 
 .header {
+    width: 100%;
+    background: $color-primary;
 
     &__inner {
         display: flex;
         flex-direction: row;
-        background: $color-primary;
         align-items: center;
         justify-content: space-between;
         padding: 10px 15px;
+
+        @include resize-to(large) {
+            width: 550px;
+        }
     }
 
     &__profile {

@@ -15,7 +15,7 @@ const Gifswinner = (props) => {
            <img className="gifswinner --hireMe" src={require('../../assets/images/winner/hire-me.gif')} alt="Cat dance gif" />
            <img className="gifswinner --postIt" src={require('../../assets/images/winner/post-it.gif')} alt="Cat dance gif" />
 
-           <Refreshpage onValueChange={handleValueChange} />
+           <Refreshpage onValueChange={handleValueChange} buttonText={'Restart Bingo'} buttonClass={'--winnersPage'} />
 
         </>
     );

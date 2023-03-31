@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss'
 
-const Refreshpage = () => {
+const Refreshpage = (props) => {
 
     const handleClickRefresh = () => {
         window.location.reload();
@@ -9,9 +9,9 @@ const Refreshpage = () => {
 
     return (
         <>
-            <div className='refreshPageControl'>            
+            <div className={'refreshPageControl ' + props.buttonClass}>            
                 <button className='button' onClick={handleClickRefresh}>
-                    Get a new Bingo Card
+                    {props.buttonText}
                 </button>
             </div>
         </>
