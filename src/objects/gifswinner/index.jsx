@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss'
 
-const Gifswinner = (props) => {
+const Gifswinner = () => {
 
     
 
@@ -11,7 +11,6 @@ const Gifswinner = (props) => {
            <img className="gifswinner --danceCat" src={require('../../assets/images/winner/cat-dance.gif')} alt="Cat dance gif" />
            <img className="gifswinner --hireMe" src={require('../../assets/images/winner/hire-me.gif')} alt="Hore me gif" />
            <img className="gifswinner --postIt" src={require('../../assets/images/winner/post-it.gif')} alt="post it gif" />
-           
            <img className="gifswinner --parrot" src={require('../../assets/images/winner/parrot-party.gif')} alt="parrot party gif" />
            <img className="gifswinner --snoopDog" src={require('../../assets/images/winner/snoop-dogg-dancing.gif')} alt="Snoop dog dancing gif" />
            <img className="gifswinner --flanders" src={require('../../assets/images/winner/flanders.gif')} alt="Flanders dancing gif" />

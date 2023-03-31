@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Profilelayer from './objects/profilelayer';
 import Headerpage from './objects/headerpage';
 import Cellsinteraction from './objects/cellsinteraction';
 import Refreshpage from './objects/refreshpage';
@@ -18,6 +19,8 @@ function App() {
 
   return (
     <>
+
+      <Profilelayer />
 
       <Headerpage />
 

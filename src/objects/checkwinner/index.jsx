@@ -90,7 +90,7 @@ const Checkwinner = (props) => {
                             <div className="winnerLayer__imageWrapper">
                                 <img className="winnerLayer__image" src={require('../../assets/images/chars/char-1.png')} alt="Intern Pixel Art" />
                             </div>
-                            <h1 className="winnerLayer__text"> Congratulations, Leandro!</h1>     
+                            <h1 className="winnerLayer__text"> Congratulations</h1>     
                             <Refreshpage onValueChange={handleValueChange} buttonText={'Restart Bingo'} buttonClass={'--winnersPage'} />
                         </div> 
 

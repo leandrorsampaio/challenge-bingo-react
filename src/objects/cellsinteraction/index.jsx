@@ -3,16 +3,14 @@ import Bingocard from '../bingocard';
 import Checkwinner from '../checkwinner';
 import './style.scss'
 
-const Cellsinteraction = (props) => {
+const Cellsinteraction = () => {
 
 
     const [activeIndex, setActiveIndex] = useState(-1);
     const [clickedIndexes, setClickedIndexes] = useState([]);
     const [newBingoCard, setNewBingoCard] = useState(false);
 
-
-
-
+    
     function handleClick(index) {
 
         if(!index.target) {
