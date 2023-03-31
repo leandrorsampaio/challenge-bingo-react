@@ -1,9 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Refreshpage from './../refreshpage';
 import { start } from "../confetti";
 import Gifswinner from "../gifswinner";
+import './style.scss'
 
 const Checkwinner = (props) => {
 
+    const [setValue] = useState('');
+    function handleValueChange(newValue) {
+        setValue(newValue);
+    }
 
 
     function Confetti() {
@@ -74,8 +80,27 @@ const Checkwinner = (props) => {
 
     return (
         <>
-            {bingoWinner === true ? <Confetti /> : null}
-            {bingoWinner === true ? <Gifswinner /> : null}
+
+            {bingoWinner === true ? 
+                <div className="winnerLayer">
+                    <div className="winnerLayer__inner">
+
+                        <div className="winnerLayer__winnerCard">
+                       
+                            <div className="winnerLayer__imageWrapper">
+                                <img className="winnerLayer__image" src={require('../../assets/images/chars/char-1.png')} alt="Intern Pixel Art" />
+                            </div>
+                            <h1 className="winnerLayer__text"> Congratulations, Leandro!</h1>     
+                            <Refreshpage onValueChange={handleValueChange} buttonText={'Restart Bingo'} buttonClass={'--winnersPage'} />
+                        </div> 
+
+                        <Confetti />
+                        <Gifswinner />
+
+                    </div> 
+                </div> 
+            : null}
+           
         </>
     );
 };

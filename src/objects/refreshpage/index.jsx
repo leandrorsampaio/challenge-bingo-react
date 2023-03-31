@@ -9,7 +9,7 @@ const Refreshpage = (props) => {
 
     return (
         <>
-            <div className={'refreshPageControl ' + props.buttonClass}>            
+            <div className={'refreshPageControl ' + props.buttonClass}>
                 <button className='button' onClick={handleClickRefresh}>
                     {props.buttonText}
                 </button>

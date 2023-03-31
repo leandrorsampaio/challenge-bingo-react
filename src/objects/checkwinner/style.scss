@@ -1,0 +1,88 @@
+@import '../../styles/1_settings/colors';
+@import '../../styles/1_settings/sizes';
+@import '../../styles/2_tools/viewports';
+
+.winnerLayer {
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    z-index: 100;
+    
+
+    &::before {
+        content: '';
+        background: $color-neutralPrimary;
+        width: 100vw;
+        display: flex;
+        height: 100vh;
+        top: 0;
+        position: absolute;
+        z-index: 200;
+        opacity: 0.75;
+    }
+
+    &__inner {
+        z-index: 300;
+        width: 100vw;
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__winnerCard {
+        background-color: $color-light;
+        display: flex;
+        z-index: 900;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 0 25.6px 57.6px 0 rgba(0,0,0,.22), 0 4.8px 14.4px 0 rgba(0,0,0,.18);
+    }
+    
+
+
+    &__imageWrapper {
+        align-self: flex-end;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        margin: 0 auto 0 auto;
+        transform-origin: bottom;
+        width: 50px;
+        animation-name: bounce-3;
+        animation-timing-function: ease;
+    }
+
+    @keyframes bounce-3 {
+        0%   { transform: translateY(0); }
+        30%  { transform: translateY(-50px); }
+        50%  { transform: translateY(0); }
+        100% { transform: translateY(0); }
+    }
+    
+    &__image {
+        height: auto;
+        width: 50px;
+        margin: 0 auto;
+    }
+
+    &__text {
+        font-weight: 700;
+        margin: 0.5rem 0 2rem;
+        color: $color-primary;
+
+        @include resize-to(small) {
+            font-size: 1.2rem;
+        }
+    
+        @include resize-to(medium) {
+            font-size: 1.6rem;
+        }
+    
+        @include resize-to(large) {
+            font-size: 1.8rem;
+        }
+    }
+}

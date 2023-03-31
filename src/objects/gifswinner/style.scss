@@ -1,3 +1,6 @@
+@import '../../styles/1_settings/sizes';
+@import '../../styles/2_tools/viewports';
+
 .gifswinner {
     position: absolute;
     
@@ -5,19 +8,107 @@
         left: 0;
         bottom: 0;
         z-index: 9;
+        width: 20%;
+        max-width: 150px;
     }
 
     &.--hireMe {
         width: 70%;
         top: 5%;
-        left: 5%;
-        z-index: 8;
+        z-index: 9;
+        max-width: 300px;
+        margin: 0 auto;
+        max-width: 300px;
     }
 
     &.--postIt {
         width: 70%;
-        right: 5%;
+        right: 10%;
         bottom: 5%;
-        z-index: 7;
+        z-index: 9;
+        max-width: 300px;
     }
+
+    &.--parrot {
+        top: 20px;
+        z-index: 10;
+        width: 50px;
+        transform: rotate(90deg);
+        left: 0;
+    }
+
+    &.--snoopDog {
+        right: 15px;
+        bottom: 0;
+        z-index: 10;
+        width: 100px;
+    }
+
+    &.--flanders {
+        left: 12%;
+        bottom: 0;
+        z-index: 4;
+        width: 120px;
+    }
+
+    &.--developerTester {
+        display: none;
+        right: 10px;
+        top: 250px;
+        z-index: 3;
+        width: 400px;
+
+        @include resize-to(large) {
+            display: block;
+        }
+    }
+
+    &.--brazil {
+        display: none;
+        left: 6%;
+        top: 300px;
+        z-index: 3;
+        width: 300px;
+        
+        @include resize-to(large) {
+            display: block;
+        }
+    } 
+    
+    &.--spock {
+        display: none;
+        right: 4%;
+        top: 10%;
+        z-index: 3;
+        max-width: 150px;
+        
+        @include resize-to(large) {
+            display: block;
+        }
+    } 
+    
+    &.--cssKing {
+        display: none;
+        top: 6%;
+        z-index: 3;
+        width: 220px;
+        left: 3%;
+
+        @include resize-to(large) {
+            display: block;
+        }    
+    }
+
+    &.--zebra {
+        display: none;
+        bottom: 5%;
+        z-index: 3;
+        width: 350px;
+        left: 25%;
+
+        @include resize-to(large) {
+            display: block;
+        }    
+    }
+
 }

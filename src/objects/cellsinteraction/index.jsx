@@ -54,29 +54,31 @@ const Cellsinteraction = (props) => {
 
 
     return (
-        <div className="bigoCardSection">
+
+        <>
+
+            <div className="bigoCardSection">
+
+                {!newBingoCard ? (
+                    <Bingocard
+                        activeIndex={activeIndex}
+                        clickedIndexes={clickedIndexes}
+                        onClick={handleClick}
+                        />
+                ) : (
+                    <div>Transition useEffect to a new card</div>
+                )}
+
+                <div className="hiddenElement">Clicked Indexes: {clickedIndexes.join(', ')}</div>
+                <button className="js-cleanUpCard hiddenElement" onClick={handleClick}>
+                    Clean Up Bingo Card
+                </button>
+
+            </div>
             
-
-            {!newBingoCard ? (
-                <Bingocard
-                    activeIndex={activeIndex}
-                    clickedIndexes={clickedIndexes}
-                    onClick={handleClick}
-                    />
-            ) : (
-                <div>Transition useEffect to a new card</div>
-            )}
-
-            
-
             <Checkwinner clickedIndexes={clickedIndexes} />
 
-            <div className="hiddenElement">Clicked Indexes: {clickedIndexes.join(', ')}</div>
-            <button className="js-cleanUpCard hiddenElement" onClick={handleClick}>
-                Clean Up Bingo Card
-            </button>
-
-        </div>
+        </>
     );
 };
 
