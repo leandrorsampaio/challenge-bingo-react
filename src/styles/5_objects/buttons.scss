@@ -2,18 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
     font-weight: 400;
     border: $color-primary;
     border-radius: 2px;
     box-sizing: border-box;
     cursor: pointer;
     display: inline-block;
-    padding: 0px 1.6rem;
     text-decoration: none;
     text-align: center;
-    min-width: 8rem;
-    height: 3rem;
     color: $color-lighterAlt;
     user-select: none;
     box-shadow: 0 25.6px 57.6px 0 rgba(0,0,0,.22), 0 4.8px 14.4px 0 rgba(0,0,0,.18);
@@ -22,6 +18,27 @@
     -moz-transition: background-color 0.5s ease-out;
     -o-transition: background-color 0.5s ease-out;
     transition: background-color 0.5s ease-out;
+
+    @include resize-to(small) {
+        padding: 0px 1.4rem;
+        font-size: 1rem;
+        min-width: 6rem;
+        height: 2.6rem;
+    }
+
+    @include resize-to(medium) {
+        padding: 0px 1.5rem;
+        font-size: 1rem;
+        min-width: 7rem;
+        height: 2.7rem;
+    }
+
+    @include resize-to(large) {
+        padding: 0px 1.6rem;
+        font-size: 1.1rem;
+        min-width: 8rem;
+        height: 3rem;
+    }
 
     @media (hover: hover) {
         &:hover,
