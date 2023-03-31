@@ -12,6 +12,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 10px 15px;
+        margin: 0 auto;
 
         @include resize-to(large) {
             width: 550px;
