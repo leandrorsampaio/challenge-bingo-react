@@ -30,20 +30,16 @@ const Cellsinteraction = () => {
 
 
         } else {
-            
-            if (index.target.classList.contains('js-cleanUpCard')) {
-                setClickedIndexes(() => {
-                    return [];
-                });
 
-                setNewBingoCard(true);
-                setTimeout(function() {
-                    setNewBingoCard(false);
-                }, 1000);
+            setClickedIndexes(() => {
+                return [];
+            });
 
+            setNewBingoCard(true);
+            setTimeout(function() {
+                setNewBingoCard(false);
+            }, 1000);
 
-
-            }
         }
 
     }
@@ -55,7 +51,17 @@ const Cellsinteraction = () => {
 
         <>
 
+            
+
             <div className="bigoCardSection">
+
+                
+                <div className="bigoCardSection__buttonWrapper">
+                    <button className="button" onClick={handleClick}>
+                        Get a New Bingo Card
+                    </button>
+                </div>
+
 
                 {!newBingoCard ? (
                     <Bingocard
@@ -67,10 +73,14 @@ const Cellsinteraction = () => {
                     <div>Transition useEffect to a new card</div>
                 )}
 
+
+                <div>Transition useEffect to a new card</div>
+
+
+
                 <div className="hiddenElement">Clicked Indexes: {clickedIndexes.join(', ')}</div>
-                <button className="js-cleanUpCard hiddenElement" onClick={handleClick}>
-                    Clean Up Bingo Card
-                </button>
+
+                
 
             </div>
             
