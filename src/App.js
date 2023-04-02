@@ -7,10 +7,7 @@ import Cellsinteraction from './objects/cellsinteraction';
 import Footerpage from './objects/footerpage';
 
 
-
-
 function App() {
-
 
   return (
     <>
