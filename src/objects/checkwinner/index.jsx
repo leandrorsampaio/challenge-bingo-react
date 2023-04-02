@@ -77,6 +77,8 @@ const Checkwinner = (props) => {
             bingoWinner = false;
     }
 
+    
+
 
     return (
         <>
@@ -88,7 +90,7 @@ const Checkwinner = (props) => {
                         <div className="winnerLayer__winnerCard">
                        
                             <div className="winnerLayer__imageWrapper">
-                                <img className="winnerLayer__image" src={require('../../assets/images/chars/char-1.png')} alt="Intern Pixel Art" />
+                                <img className="winnerLayer__image" src={require('../../assets/images/chars/star.png')} alt="Intern Pixel Art" />
                             </div>
                             <h1 className="winnerLayer__text"> Congratulations</h1>     
                             <Refreshpage onValueChange={handleValueChange} buttonText={'Restart Bingo'} buttonClass={'--winnersPage'} />

@@ -38,7 +38,7 @@ const Cellsinteraction = () => {
             setNewBingoCard(true);
             setTimeout(function() {
                 setNewBingoCard(false);
-            }, 1000);
+            }, 0);
 
         }
 
@@ -70,11 +70,10 @@ const Cellsinteraction = () => {
                         onClick={handleClick}
                         />
                 ) : (
-                    <div>Transition useEffect to a new card</div>
+                    <div></div>
                 )}
 
 
-                <div>Transition useEffect to a new card</div>
 
 
 

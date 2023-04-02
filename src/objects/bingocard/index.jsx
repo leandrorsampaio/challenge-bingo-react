@@ -95,7 +95,9 @@ const Bingocard = (props) => {
                     key={i+1}
                     onClick={() => props.onClick(i+1)}>
                     <p className={'bingoCard__text' + (cellBingo ? ' --cellBingo' : '')}>
-                        {cellBingo ? 'Bingo' : item.name}
+                        {cellBingo ?  
+                            <img className="winnerLayer__image" src={require('../../assets/images/chars/star.png')} alt="Intern Pixel Art" />
+                        : item.name}
                     </p>
                 </div>
             )
