@@ -3,6 +3,7 @@ import './style.scss'
 
 function NameForm() {
 
+  
   const [firstName, setFirstName] = useState('');
   const [userPosition, setUserPosition] = useState('');
 
