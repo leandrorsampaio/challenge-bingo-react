@@ -2,15 +2,9 @@ import React from 'react';
 import { ReactComponent as IconEnvelope } from '../../assets/icons/envelope.svg';
 import { ReactComponent as IconGithub } from '../../assets/icons/github.svg';
 import { ReactComponent as IcoLinkedinn } from '../../assets/icons/linkedin.svg';
-
-
-
-
 import './style.scss'
 
 const FooterPage = () => {
-
-  
 
     return (
         <>

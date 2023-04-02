@@ -28,7 +28,6 @@ const HeaderPage = () => {
                     <div className='header__logo'>
                         <p className='header__logoText'>CALL BINGO!</p>
                     </div>
-
                 
                     <div className='header__profile'>
                         <img className="header__charImage" src={imgCharUrl} alt="Intern Pixel Art" />
@@ -37,8 +36,6 @@ const HeaderPage = () => {
                             <p className='header__profileText --level'>{data.companyRole}</p>
                         </div>
                     </div>
-
-                    
 
                 </div>
             </header>

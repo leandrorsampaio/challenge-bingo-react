@@ -21,11 +21,9 @@ function MyConsumer() {
 
     return (
 
-
         <div className="profileLayer js-profileLayer">
             <div className="profileLayer__form">
                 <h1 className="profileLayer__title">Welcome to Call Bingo!</h1>
-
 
                 <form onSubmit={handleSubmit}>
 
@@ -91,7 +89,6 @@ function MyConsumer() {
 
                     <button className="button profileLayer__button" type="submit">Start Bingo</button>
                 </form>
-
 
             </div>
         </div>

@@ -46,22 +46,16 @@ const Cellsinteraction = () => {
 
 
 
-
     return (
 
         <>
 
-            
-
             <div className="bigoCardSection">
-
-                
                 <div className="bigoCardSection__buttonWrapper">
                     <button className="button" onClick={handleClick}>
                         Get a New Bingo Card
                     </button>
                 </div>
-
 
                 {!newBingoCard ? (
                     <Bingocard
@@ -73,13 +67,7 @@ const Cellsinteraction = () => {
                     <div></div>
                 )}
 
-
-
-
-
                 <div className="hiddenElement">Clicked Indexes: {clickedIndexes.join(', ')}</div>
-
-                
 
             </div>
             

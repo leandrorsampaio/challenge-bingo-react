@@ -3,8 +3,6 @@ import './style.scss'
 
 const Gifswinner = () => {
 
-    
-
     return (
         <>
 
