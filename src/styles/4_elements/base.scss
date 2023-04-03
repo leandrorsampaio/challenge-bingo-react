@@ -1,7 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: $color-lighter;
-  color: $color-neutralDark;
+  background-color: var(--color-lighter);
+  color: var(--color-neutralDark);
 }
 
 .hiddenElement {
@@ -10,7 +10,7 @@ body {
 
 .svgIcon {
   height: 1rem;
-  fill: $color-lighterAlt;
+  fill: var(--color-lighterAlt);
   -webkit-transition: fill 0.5s ease-out;
   -moz-transition: fill 0.5s ease-out;
   -o-transition: fill 0.5s ease-out;
@@ -20,7 +20,7 @@ body {
     &:hover,
     &:focus,
     &:active {
-      fill: $color-darker;
+      fill: var(--color-darker);
       -webkit-transition: fill 0.5s ease-out;
       -moz-transition: fill 0.5s ease-out;
       -o-transition: fill 0.5s ease-out;

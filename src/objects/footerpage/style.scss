@@ -1,4 +1,3 @@
-@import '../../styles/1_settings/colors';
 @import '../../styles/1_settings/sizes';
 @import '../../styles/2_tools/viewports';
 
@@ -7,7 +6,7 @@
     &__inner {
         display: flex;
         flex-direction: row;
-        background: $color-primary;
+        background: var(--color-primary);
         align-items: center;
         justify-content: space-between;
         padding: 10px 15px;
@@ -30,7 +29,7 @@
 
     &__profileText {
         margin: 0;
-        color: $color-lighterAlt;
+        color: var(--color-lighterAlt);
 
         &.--name {
             font-size: 1rem;
@@ -51,7 +50,7 @@
         font-weight: 700;
         font-size: 1.5rem;
         margin: 0;
-        color: $color-lighterAlt;
+        color: var(--color-lighterAlt);
     }   
 }       
 
@@ -60,7 +59,7 @@
 .footer {
     position: absolute;
     bottom: 0;
-    background: $color-tertiary;
+    background: var(--color-tertiary);
     width: 100%;
     display: flex;
     align-items: center;
@@ -68,7 +67,7 @@
     padding: 0.3rem 0;
 
     &__text {
-        color: $color-lighterAlt;
+        color: var(--color-lighterAlt);
         font-size: 0.8rem;
         display: flex;
         margin: 0;

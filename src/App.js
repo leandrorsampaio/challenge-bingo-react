@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { useContext } from 'react';
 import MyProvider from './objects/usercontextprovider';
 import MyConsumer from './objects/usercontentlayer';
 import Headerpage from './objects/headerpage';
@@ -9,18 +8,19 @@ import Footerpage from './objects/footerpage';
 
 function App() {
 
+
   return (
     <>
 
       <MyProvider>
-        
-        <MyConsumer />
 
-        <Headerpage />
+          <MyConsumer />
 
-        <Cellsinteraction />
+          <Headerpage />
 
-        <Footerpage />
+          <Cellsinteraction />
+
+          <Footerpage />
 
       </MyProvider>
 

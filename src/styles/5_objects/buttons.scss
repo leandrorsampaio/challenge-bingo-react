@@ -3,17 +3,17 @@
     justify-content: center;
     align-items: center;
     font-weight: 400;
-    border: $color-primary;
+    border: var(--color-primary);
     border-radius: 2px;
     box-sizing: border-box;
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    color: $color-lighterAlt;
+    color: var(--color-lighterAlt);
     user-select: none;
     box-shadow: 0 25.6px 57.6px 0 rgba(0,0,0,.22), 0 4.8px 14.4px 0 rgba(0,0,0,.18);
-    background-color: $color-primary;
+    background-color: var(--color-primary);
     -webkit-transition: background-color 0.5s ease-out;
     -moz-transition: background-color 0.5s ease-out;
     -o-transition: background-color 0.5s ease-out;
@@ -44,7 +44,7 @@
         &:hover,
         &:focus,
         &:active {
-            background-color: $color-darker;
+            background-color: var(--color-darker);
             -webkit-transition: background-color 0.5s ease-out;
             -moz-transition: background-color 0.5s ease-out;
             -o-transition: background-color 0.5s ease-out;

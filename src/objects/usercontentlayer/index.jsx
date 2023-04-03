@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import MyContext from '../usercontext';
 import './style.scss'
 
@@ -18,6 +18,17 @@ function MyConsumer() {
             div.remove();
         });
     };
+
+    useEffect(() => {
+
+        const colorVar = companyRole.replace(/\s+/g, '_');
+       
+        document.body.classList.add(colorVar);
+
+        return () => {
+          document.body.classList.remove(colorVar);
+        };
+      });
 
     return (
 
