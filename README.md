@@ -1,8 +1,8 @@
 # Call Bingo Project
+
 Created by Leandro Rossi Sampaio as a Code Challenge for Sensor Sensory Minds 
 It was created using REACT JS
 ---------------
-
 
 ## Getting Started with Create React App
 
