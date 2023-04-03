@@ -39,7 +39,8 @@
     }
 
     &__inputText {
-        margin-right: 1.5rem;
+        width: 100%;
+        margin-right: 0;
         margin-bottom: 1rem;
     }
 
@@ -61,4 +62,64 @@
         margin-left: 0.7rem;
         max-width: 2rem;
     }
+
+
+    &__formLine {
+
+        &.--radioLineManager {
+            .profileLayer__charImage {
+                &.--Manager {
+                    animation-duration: 1s;
+                    animation-iteration-count: infinite;
+                    transform-origin: bottom;
+                    animation-name: bounce-2;
+                    animation-timing-function: ease;
+                }
+            }
+        }
+
+        &.--radioLineDeveloper {
+            .profileLayer__charImage {
+                &.--Developer {
+                    animation-duration: 1s;
+                    animation-iteration-count: infinite;
+                    transform-origin: bottom;
+                    animation-name: bounce-2;
+                    animation-timing-function: ease;
+                }
+            }
+        }
+
+        &.--radioLineDesigner{
+            .profileLayer__charImage {
+                &.--Designer {
+                    animation-duration: 1s;
+                    animation-iteration-count: infinite;
+                    transform-origin: bottom;
+                    animation-name: bounce-2;
+                    animation-timing-function: ease;
+                }
+            }
+        }
+
+        &.--radioLineQA_Tester {
+            .profileLayer__charImage {
+                &.--imgQA {
+                    animation-duration: 1s;
+                    animation-iteration-count: infinite;
+                    transform-origin: bottom;
+                    animation-name: bounce-2;
+                    animation-timing-function: ease;
+                }
+            }
+        }
+    }
+
+    @keyframes bounce-2 {
+        0%   { transform: translateY(0); }
+        30%  { transform: translateY(-20px); }
+        50%  { transform: translateY(0); }
+        100% { transform: translateY(0); }
+    }
+   
 }

@@ -8,6 +8,7 @@ function MyConsumer() {
     const [inputData, setInputData] = useState('');
     const [companyRole, setCompanyRole] = useState('Manager');
     const profileLayerDiv = document.querySelectorAll(".js-profileLayer");
+    const colorVar = companyRole.replace(/\s+/g, '_');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,9 +21,6 @@ function MyConsumer() {
     };
 
     useEffect(() => {
-
-        const colorVar = companyRole.replace(/\s+/g, '_');
-       
         document.body.classList.add(colorVar);
 
         return () => {
@@ -43,6 +41,7 @@ function MyConsumer() {
                             <p className="profileLayer__text">Your name: </p>
                             <input
                                 type="text"
+                                maxLength="20"
                                 className="inputText profileLayer__inputText"
                                 value={inputData}
                                 onChange={(e) => setInputData(e.target.value)}
@@ -50,7 +49,7 @@ function MyConsumer() {
                         </label>
                     </div>
 
-                    <div className="profileLayer__formLine">
+                    <div className={'profileLayer__formLine --radioLine'  + colorVar}>
                         <p className="profileLayer__text">Your Role/Position: </p>
                         <label className='profileLayer__formRadioItem'>
                             <input
@@ -60,7 +59,7 @@ function MyConsumer() {
                                 checked={companyRole === 'Manager'}
                                 onChange={(e) => setCompanyRole(e.target.value)}
                             />
-                            <img className="profileLayer__charImage" src={require('../../assets/images/chars/char-1.png')} alt="Intern Pixel Art" />
+                            <img className="profileLayer__charImage --Manager" src={require('../../assets/images/chars/char-1.png')} alt="Intern Pixel Art" />
                             <p className="profileLayer__textPosition">Project Manager</p>
                         </label>
                         <label className='profileLayer__formRadioItem'>
@@ -71,7 +70,7 @@ function MyConsumer() {
                                 checked={companyRole === 'Developer'}
                                 onChange={(e) => setCompanyRole(e.target.value)}
                             />
-                            <img className="profileLayer__charImage" src={require('../../assets/images/chars/char-2.png')} alt="Intern Pixel Art" />
+                            <img className="profileLayer__charImage --Developer" src={require('../../assets/images/chars/char-2.png')} alt="Intern Pixel Art" />
                             <p className="profileLayer__textPosition">Developer</p>
                         </label>
                         <label className='profileLayer__formRadioItem'>
@@ -82,7 +81,7 @@ function MyConsumer() {
                                 checked={companyRole === 'Designer'}
                                 onChange={(e) => setCompanyRole(e.target.value)}
                             />
-                            <img className="profileLayer__charImage" src={require('../../assets/images/chars/char-3.png')} alt="Intern Pixel Art" />
+                            <img className="profileLayer__charImage --Designer" src={require('../../assets/images/chars/char-3.png')} alt="Intern Pixel Art" />
                             <p className="profileLayer__textPosition">Designer</p>
                         </label>
                         <label className='profileLayer__formRadioItem'>
@@ -93,7 +92,7 @@ function MyConsumer() {
                                 checked={companyRole === 'QA Tester'}
                                 onChange={(e) => setCompanyRole(e.target.value)}
                             />
-                            <img className="profileLayer__charImage" src={require('../../assets/images/chars/char-4.png')} alt="Intern Pixel Art" />
+                            <img className="profileLayer__charImage --imgQA" src={require('../../assets/images/chars/char-4.png')} alt="Intern Pixel Art" />
                             <p className="profileLayer__textPosition">QA Tester</p>
                         </label>
                     </div>
