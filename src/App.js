@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import MyProvider from './objects/usercontextprovider';
 import MyConsumer from './objects/usercontentlayer';
 import Headerpage from './objects/headerpage';
