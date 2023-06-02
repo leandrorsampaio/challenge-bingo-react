@@ -1,5 +1,11 @@
 import React, { useContext } from 'react';
 import MyContext from '../usercontext';
+import imgCharMichael from '../../assets/images/chars/char-1.png';
+import imgCharJim from '../../assets/images/chars/char-2.png';
+import imgCharPam from '../../assets/images/chars/char-3.png';
+import imgCharDwight from '../../assets/images/chars/char-4.png';
+
+
 import './style.scss'
 
 const HeaderPage = () => {
@@ -9,13 +15,13 @@ const HeaderPage = () => {
 
 
     if (data.companyRole === 'Manager') {
-        imgCharUrl = require('../../assets/images/chars/char-1.png');
+        imgCharUrl = imgCharMichael;
     } else if (data.companyRole === 'Developer') {
-        imgCharUrl = require('../../assets/images/chars/char-2.png');
+        imgCharUrl = imgCharJim;
     } else if (data.companyRole === 'Designer') {
-        imgCharUrl = require('../../assets/images/chars/char-3.png');
+        imgCharUrl = imgCharPam;
     } else {
-        imgCharUrl = require('../../assets/images/chars/char-4.png');
+        imgCharUrl = imgCharDwight;
     }
 
 

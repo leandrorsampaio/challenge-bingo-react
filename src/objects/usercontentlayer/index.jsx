@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import MyContext from '../usercontext';
+import imgCharMichael from '../../assets/images/chars/char-1.png';
+import imgCharJim from '../../assets/images/chars/char-2.png';
+import imgCharPam from '../../assets/images/chars/char-3.png';
+import imgCharDwight from '../../assets/images/chars/char-4.png';
 import './style.scss'
 
 function MyConsumer() {
@@ -59,7 +63,7 @@ function MyConsumer() {
                                 checked={companyRole === 'Manager'}
                                 onChange={(e) => setCompanyRole(e.target.value)}
                             />
-                            <img className="profileLayer__charImage --Manager" src={require('../../assets/images/chars/char-1.png')} alt="Intern Pixel Art" />
+                            <img className="profileLayer__charImage --Manager" src={imgCharMichael} alt="Intern Pixel Art" />
                             <p className="profileLayer__textPosition">Project Manager</p>
                         </label>
                         <label className='profileLayer__formRadioItem'>
@@ -70,7 +74,7 @@ function MyConsumer() {
                                 checked={companyRole === 'Developer'}
                                 onChange={(e) => setCompanyRole(e.target.value)}
                             />
-                            <img className="profileLayer__charImage --Developer" src={require('../../assets/images/chars/char-2.png')} alt="Intern Pixel Art" />
+                            <img className="profileLayer__charImage --Developer" src={imgCharJim} alt="Intern Pixel Art" />
                             <p className="profileLayer__textPosition">Developer</p>
                         </label>
                         <label className='profileLayer__formRadioItem'>
@@ -81,7 +85,7 @@ function MyConsumer() {
                                 checked={companyRole === 'Designer'}
                                 onChange={(e) => setCompanyRole(e.target.value)}
                             />
-                            <img className="profileLayer__charImage --Designer" src={require('../../assets/images/chars/char-3.png')} alt="Intern Pixel Art" />
+                            <img className="profileLayer__charImage --Designer" src={imgCharPam} alt="Intern Pixel Art" />
                             <p className="profileLayer__textPosition">Designer</p>
                         </label>
                         <label className='profileLayer__formRadioItem'>
@@ -92,7 +96,7 @@ function MyConsumer() {
                                 checked={companyRole === 'QA Tester'}
                                 onChange={(e) => setCompanyRole(e.target.value)}
                             />
-                            <img className="profileLayer__charImage --imgQA" src={require('../../assets/images/chars/char-4.png')} alt="Intern Pixel Art" />
+                            <img className="profileLayer__charImage --imgQA" src={imgCharDwight} alt="Intern Pixel Art" />
                             <p className="profileLayer__textPosition">QA Tester</p>
                         </label>
                     </div>

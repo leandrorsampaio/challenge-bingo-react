@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TableData from '../../assets/data/BoardData.json';
+import imgStar from '../../assets/images/chars/star.png';
 import './style.scss'
 
 
@@ -96,7 +97,7 @@ const Bingocard = (props) => {
                     onClick={() => props.onClick(i+1)}>
                     <p className={'bingoCard__text' + (cellBingo ? ' --cellBingo' : '')}>
                         {cellBingo ?  
-                            <img className="winnerLayer__image" src={require('../../assets/images/chars/star.png')} alt="Intern Pixel Art" />
+                            <img className="winnerLayer__image" src={imgStar} alt="Intern Pixel Art" />
                         : item.name}
                     </p>
                 </div>

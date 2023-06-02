@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Refreshpage from './../refreshpage';
 import { start } from "../confetti";
 import Gifswinner from "../gifswinner";
+import imgStar from '../../assets/images/chars/star.png';
 import './style.scss'
 
 const Checkwinner = (props) => {
@@ -89,7 +90,7 @@ const Checkwinner = (props) => {
                         <div className="winnerLayer__winnerCard">
                        
                             <div className="winnerLayer__imageWrapper">
-                                <img className="winnerLayer__image" src={require('../../assets/images/chars/star.png')} alt="Intern Pixel Art" />
+                                <img className="winnerLayer__image" src={imgStar} alt="Intern Pixel Art" />
                             </div>
                             <h1 className="winnerLayer__text"> Congratulations!</h1>     
                             <Refreshpage onValueChange={handleValueChange} buttonText={'Restart Bingo'} buttonClass={'--winnersPage'} />
